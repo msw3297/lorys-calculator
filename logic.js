@@ -15,9 +15,9 @@ function handleCalculateButtonClicked() {
   const budgetPriceInput = document.getElementById("budget-price-input");
   const promotionPriceInput = document.getElementById("promotion-price-input");
 
-  const originalPrice = originalPriceInput.value;
-  const budgetPrice = budgetPriceInput.value;
-  const promotionPrice = promotionPriceInput.value;
+  const originalPrice = originalPriceInput.value.replace(",", ".");
+  const budgetPrice = budgetPriceInput.value.replace(",", ".");
+  const promotionPrice = promotionPriceInput.value.replace(",", ".");
 
   if (originalPrice == 0) {
     alert("Attention, silly Lorasian:\nYou forgot to add an original price value");
@@ -37,9 +37,9 @@ function handleCalculateButtonClicked() {
   const cashPriceText = document.getElementById("cash-price-value");
   const monthlyRateText = document.getElementById("monthly-rate-value");
 
-  fullPriceText.textContent = fullPrice;
-  cashPriceText.textContent = cashPrice;
-  monthlyRateText.textContent = monthlyRate;
+  fullPriceText.textContent = fullPrice.toString().replace(".", ",");
+  cashPriceText.textContent = cashPrice.toString().replace(".", ",");
+  monthlyRateText.textContent = monthlyRate.toString().replace(".", ",");
 }
 
 function handleClearButtonClicked() {

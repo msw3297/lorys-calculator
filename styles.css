@@ -138,7 +138,7 @@ input[type="text"] {
   align-items: center;
 }
 
-.output-value-container {
+.output-value {
   width: 80px;
 
   text-align: start;

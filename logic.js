@@ -21,8 +21,8 @@ function handleCalculateButtonClicked() {
   const promotionPriceInput = document.getElementById("promotion-price-input");
 
   const originalPrice = parseFloat(originalPriceInput.value.replace(",", "."));
-  const budgetPrice = parseFloat(budgetPriceInput.value.replace(",", "."));
-  const promotionPrice = parseFloat(promotionPriceInput.value.replace(",", "."));
+  const budgetPrice = Math.max(parseFloat(budgetPriceInput.value.replace(",", ".")), 0);
+  const promotionPrice = Math.max(parseFloat(promotionPriceInput.value.replace(",", ".")), 0);
 
   if (isNaN(originalPrice) || originalPrice === 0) {
     alert("Attention, silly Lorasian:\nYou forgot to add an original price value");
@@ -39,17 +39,17 @@ function handleCalculateButtonClicked() {
   const cashPriceText = document.getElementById("cash-price-value");
   const monthlyRateText = document.getElementById("monthly-rate-value");
 
-  fullPriceText.textContent = fullPrice.toString().replace(".", ",");
-  cashPriceText.textContent = cashPrice.toString().replace(".", ",");
-  monthlyRateText.textContent = monthlyRate.toString().replace(".", ",");
+  fullPriceText.value = fullPrice.toString().replace(".", ",");
+  cashPriceText.value = cashPrice.toString().replace(".", ",");
+  monthlyRateText.value = monthlyRate.toString().replace(".", ",");
 }
 
 function handleClearButtonClicked() {
   const inputs = document.getElementsByClassName("input");
-  const outputs = document.getElementsByClassName("output-value-text");
+  const outputs = document.getElementsByClassName("output-value");
 
   Array.from(inputs).forEach(input => (input.value = "0"));
-  Array.from(outputs).forEach(output => (output.textContent = "0"));
+  Array.from(outputs).forEach(output => (output.value = "0"));
 }
 
 const calculateButton = document.getElementById("calculate-button");

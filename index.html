@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Lory's Calculator</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href=" /cat_icon.png">
+<script type="module" crossorigin src="/assets/index-CNp9ANNu.js"></script>
+<link rel="stylesheet" crossorigin href="/assets/index-ChzEFvEH.css">
+
+<body>
+  <div id="main-container">
+    <div id="usable-area">
+      <div id="inputs-container">
+        <div class="input-container">
+          <label 
+            for="original-price"
+            class="input-label"
+          >
+            Original Price:
+          </label>
+
+          <input 
+            type="text"
+            id="original-price-input"
+            name="original-price"
+            value="0"
+            autocomplete="off"
+            class="input"
+          />
+        </div>
+
+        <div class="input-container">
+          <label 
+            for="budget-price"
+            class="input-label"
+          >
+            Budget Price:
+          </label>
+
+          <input 
+            type="text"
+            id="budget-price-input"
+            name="budget-price"
+            value="0"
+            autocomplete="off"
+            class="input"
+          />
+        </div>
+
+        <div class="input-container">
+          <label 
+            for="promotion-price"
+            class="input-label"
+          >
+            Promotion Price:
+          </label>
+
+          <input 
+            type="text"
+            id="promotion-price-input"
+            name="promotion-price"
+            value="0"
+            autocomplete="off"
+            class="input"
+          />
+        </div>
+      </div>
+
+      <div id="buttons-container">
+        <button 
+          class="control-button"
+          id="calculate-button"
+        >
+          Calculate
+        </button>
+
+        <button 
+          class="control-button"
+          id="clear-button"
+        >
+          Clear
+        </button>
+      </div>
+
+      <div id="outputs-container">
+        <div class="output-container">
+          <p class="output-label">Full Price:</p>
+
+          <input 
+            type="text"
+            disabled
+            class="output-value"
+            id="full-price-value"
+            value="0"
+          />
+        </div>
+
+        <div class="output-container">
+          <p class="output-label">Cash Price:</p>
+
+          <input 
+            type="text"
+            disabled
+            class="output-value"
+            id="cash-price-value"
+            value="0"
+          />
+        </div>
+
+        <div class="output-container">
+          <p class="output-label">Monthly Rate:</p>
+
+          <input 
+            type="text"
+            disabled
+            class="output-value"
+            id="monthly-rate-value"
+            value="0"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
